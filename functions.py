@@ -1,3 +1,4 @@
+import os
 import requests
 import json
 import urllib3
@@ -24,9 +25,9 @@ def load_data():
     auth_url = 'https://www.strava.com/oauth/token'
     activities_url = 'https://www.strava.com/api/v3/athlete/activities'
     payload = {
-        'client_id': '61192',
-        'client_secret': '2c4d071cbe331679dba8dd98ca5737807c649bd5',
-        'refresh_token': '064486d45898df2990c369aa127472fce092912e',
+        'client_id': os.environ.get['CLIENT_ID'],
+        'client_secret': os.environ.get['CLIENT_SECRET'],
+        'refresh_token': os.environ.get['REFRESH_TOKEN'],
         'grant_type': 'refresh_token',
         'f': 'json'
     }
