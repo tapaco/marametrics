@@ -1,18 +1,8 @@
-import base64
 import streamlit as st
 
 from datetime import datetime, date
-from functions import load_data, pace, read_markdown_file
+from functions import load_data, pace, read_markdown_file, filedownload
 from charts import radar_chart, time_series, clustering
-
-def filedownload(df):
-    """
-    download clustered data as csv
-    """
-    csv = df.to_csv(index=False)
-    b64 = base64.b64encode(csv.encode()).decode()  # strings <-> bytes conversions
-    href = f'<a href="data:file/csv;base64,{b64}" download="runs.csv">Download output as CSV</a>'
-    return href
 
 # Title and info
 st.title('cRUNching the numbers')
