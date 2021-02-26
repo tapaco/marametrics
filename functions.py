@@ -1,6 +1,7 @@
 import requests
 import json
 import urllib3
+import base64
 
 import numpy as np
 import pandas as pd
