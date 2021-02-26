@@ -99,6 +99,15 @@ def vo2_max(row):
     vo2max = 3.77 * velocity
     return round(vo2max)
 
+def filedownload(df):
+    """
+    download clustered data as csv
+    """
+    csv = df.to_csv(index=False)
+    b64 = base64.b64encode(csv.encode()).decode()  # strings <-> bytes conversions
+    href = f'<a href="data:file/csv;base64,{b64}" download="runs.csv">Download output as CSV</a>'
+    return href
+
 @st.cache
 def read_markdown_file(markdown_file):
     return Path(markdown_file).read_text()
