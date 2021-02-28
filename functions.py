@@ -67,6 +67,14 @@ def load_data():
 
     return runs
 
+def summary_stats(df):
+    """
+    return summary statistics for the respective dataframe
+    """
+    s_stats = df.copy()
+    s_stats = s_stats.drop(['upload_id'], axis=1)
+    return s_stats.describe(include = ['float', 'int'])
+
 def pace(row):
     """
     converts speed in m/s to pace in s/km
