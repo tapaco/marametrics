@@ -41,3 +41,8 @@ st.plotly_chart(radar_chart_fig)
 # Time series plot
 ts_fig = time_series(runs)
 st.plotly_chart(ts_fig)
+
+# Summary stats
+stats_check = st.checkbox("📊 Summary stats")
+if stats_check:
+    st.dataframe(summary_stats(runs))
