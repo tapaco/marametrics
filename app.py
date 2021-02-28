@@ -1,7 +1,7 @@
 import streamlit as st
 
 from datetime import datetime, date
-from functions import load_data, pace, read_markdown_file, filedownload
+from functions import load_data, pace, read_markdown_file, filedownload, summary_stats
 from charts import radar_chart, time_series, clustering
 
 # Title and info
