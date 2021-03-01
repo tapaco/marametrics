@@ -46,3 +46,9 @@ st.plotly_chart(ts_fig)
 stats_check = st.checkbox("📊 Summary stats")
 if stats_check:
     st.dataframe(summary_stats(runs))
+    
+# Data dictionary
+data_check = st.checkbox("📕 Data dictionary")
+if data_check:
+    dict_markdown = read_markdown_file("dictionary.md")
+    st.markdown(dict_markdown, unsafe_allow_html=True)
