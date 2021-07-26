@@ -1,5 +1,5 @@
 
-TL;DR - check out the app [here](https://share.streamlit.io/tapaco/marametrics/app.py) and a link to the [code](https://github.com/tapaco/marametrics).
+TL;DR - check out the app [here](https://share.streamlit.io/tapaco/marametrics/app.py). 
 
 ![bathalf.jpeg](/media/bathalf.jpeg)
 
